@@ -1,0 +1,45 @@
+input[type=text] {
+	background-color: #484645;
+	border: none;
+	color: white;
+	text-align: right;
+	font-size: 1.8em;
+	padding-top: 23px;
+	font-family: "Courier New", Times, Monospace;
+	font-weight: bold;
+}
+body { margin:0 }
+form { margin:0 }
+
+
+.toprow {
+	background-color: #686867;
+	border: none;
+	font-size: 1.0em;
+	color: white;
+	font-family: "Courier New", Times, Monospace;
+}
+
+.otherrows {
+	background-color: #B4B2AF;
+	border: none;
+	font-size: 1.0em;
+	color: white;
+	font-family: "Courier New", Times, Monospace;
+
+}
+
+.operation {
+	background-color: #F78F01;
+	border: none;
+	font-size: 1.0em;
+	color: white;
+	font-family: "Courier New", Times, Monospace;
+	font-weight: bold;
+
+}
+
+
+html{
+	background-color: #484645;
+}
