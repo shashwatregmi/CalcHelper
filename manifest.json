@@ -1,0 +1,14 @@
+{    
+"name": "CalcHelper",    
+"version": "1.0",    
+"description": "Simple Calculator Extension for Chrome",    
+"manifest_version": 2,
+"icons":{"128": "icon.png"},
+"browser_action": {
+  "default_icon": "icon.png", // "Icon made by itim2101 from www.flaticon.com"
+
+  "default_popup": "popup.html"
+},
+"permissions": ["activeTab"]
+}
+
