@@ -20,6 +20,10 @@ form { margin:0 }
 	font-family: "Courier New", Times, Monospace;
 }
 
+.toprow:hover{
+	background-color: #8e8e8d;
+}
+
 .otherrows {
 	background-color: #B4B2AF;
 	border: none;
@@ -27,6 +31,10 @@ form { margin:0 }
 	color: white;
 	font-family: "Courier New", Times, Monospace;
 
+}
+
+.otherrows:hover {
+	background-color: #9b9995;
 }
 
 .operation {
@@ -39,6 +47,9 @@ form { margin:0 }
 
 }
 
+.operation:hover {
+	background-color: #fea62d;
+}
 
 html{
 	background-color: #484645;
