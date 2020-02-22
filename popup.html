@@ -1,16 +1,17 @@
 <html>
 <head>
 	<link href="css/styles.css" rel="stylesheet">
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<form name"calc" Id= "calc">
-	<input type="text" name="Input" autofocus value = "" textarea style="height: 60px; width: 200px"> </textarea> 
+	<input type="text" id = "numbox" name="Input" autofocus value = "" textarea style="height: 60px; width: 200px"> </textarea> 
 	<table CELLSPACING=0>
 	<tr>
 	<td>
-	<input type="button" class ="toprow" value=" AC " onClick="calc.Input.value ='' " style="height: 50px; width: 98px;"> </td>
+	<input type="button" class ="toprow" value=" AC " onClick="empty()" style="height: 50px; width: 98px;"> </td>
 	<td>
-	<input type="button" class ="toprow" value=" C " onClick="calc.Input.value ='' " style="height: 50px; width: 49px;"></td>
+	<input type="button" class ="toprow" value=" C " onClick="empty()" style="height: 50px; width: 49px;"></td>
 	<td>
 	<input type="button" class ="operation" value= &divide; onClick="calc.Input.value ='' " style="height: 50px; width: 49px;"></td>
 	</tr>
@@ -19,31 +20,31 @@
 	<table CELLSPACING=0>
 	<tr>
 	<td>
-	<input type="button" class ="otherrows" value=" 7 " onClick="calc.Input.value +='7' " style="height: 50px; width: 48px;"></td>
+	<input type="button" id = "seven" class ="otherrows" value=" 7 " style="height: 50px; width: 48px;"></td>
 	<td>
-	<input type="button" class ="otherrows" value=" 8 " onClick="calc.Input.value +='8' " style="height: 50px; width: 48px;"></td>
+	<input type="button" id = "eight" class ="otherrows" value=" 8 " style="height: 50px; width: 48px;"></td>
 	<td>
-	<input type="button" class ="otherrows" value=" 9 " onClick="calc.Input.value +='9' " style="height: 50px; width: 49px;"></td>
+	<input type="button" id = "nine" class ="otherrows" value=" 9 " style="height: 50px; width: 49px;"></td>
 	<td>
 	<input type="button" class ="operation" value= &times;  onClick="calc.Input.value ='' " style="height: 50px; width: 49px;"> </td>
 	</tr>
 	<tr>
 	<td>
-	<input type="button" class ="otherrows" value=" 4 " onClick="calc.Input.value +='7' " style="height: 50px; width: 48px;"></td>
+	<input type="button" id = "four" class ="otherrows" value=" 4 " style="height: 50px; width: 48px;"></td>
 	<td>
-	<input type="button" class ="otherrows" value=" 5 " onClick="calc.Input.value +='8' " style="height: 50px; width: 48px;"></td>
+	<input type="button" id = "five" class ="otherrows" value=" 5 " style="height: 50px; width: 48px;"></td>
 	<td>
-	<input type="button" class ="otherrows" value=" 6 " onClick="calc.Input.value +='9' " style="height: 50px; width: 49px;"></td>
+	<input type="button" id = "six" class ="otherrows" value=" 6 " style="height: 50px; width: 49px;"></td>
 	<td>
 	<input type="button" class ="operation" value= " - "  onClick="calc.Input.value ='' " style="height: 50px; width: 49px;"> </td>
 	</tr>
 	<tr>
 	<td>
-	<input type="button" class ="otherrows" value=" 1 " onClick="calc.Input.value +='7' " style="height: 50px; width: 48px;"></td>
+	<input type="button" id = "one" class ="otherrows" value=" 1 " style="height: 50px; width: 48px;"></td>
 	<td>
-	<input type="button" class ="otherrows" value=" 2 " onClick="calc.Input.value +='8' " style="height: 50px; width: 48px;"></td>
+	<input type="button" id = "two" class ="otherrows" value=" 2 " style="height: 50px; width: 48px;"></td>
 	<td>
-	<input type="button" class ="otherrows" value=" 3 " onClick="calc.Input.value +='9' " style="height: 50px; width: 49px;"></td>
+	<input type="button"  id = "three" class ="otherrows" value=" 3 " style="height: 50px; width: 49px;"></td>
 	<td>
 	<input type="button" class ="operation" value= " + "  onClick="calc.Input.value ='' " style="height: 50px; width: 49px;"> </td>
 	</tr>
@@ -51,13 +52,15 @@
 	<table CELLSPACING="0" style ="padding-bottom: 0px;">
 	<tr>
 	<td>
-	<input type="button" class ="otherrows" value=" 0 " onClick="calc.Input.value +='0' " style="height: 50px; width: 98px;"> </td>
+	<input type="button" id = "zero" class ="otherrows" value=" 0 " style="height: 50px; width: 98px;"> </td>
 	<td>
-	<input type="button" class ="otherrows" value=" . " onClick="calc.Input.value +='.' " style="height: 50px; width: 49px;"></td>
+	<input type="button" id = "dot" class ="otherrows" value=" . " style="height: 50px; width: 49px;"></td>
 	<td>
 	<input type="button" class ="operation" value= " = "; onClick="calc.Input.value =eval(calc.Input.value)" style="height: 50px; width: 49px;"></td>
 	</tr>
 	</table>
 	</form>
 </body>
+
+
 </html>
