@@ -1,7 +1,3 @@
-function empty() {
-	document.getElementById("calc").reset();
-}
-
 document.addEventListener('DOMContentLoaded', function() {
 	var zero = document.getElementById('zero');
     var one = document.getElementById('one');
@@ -14,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var eight = document.getElementById('eight');
     var nine = document.getElementById('nine');
     var dot = document.getElementById('dot');
+    var clear = document.getElementById('clear');
+
 
     zero.addEventListener('click', function() {
         document.getElementById("numbox").value += '0';
@@ -57,5 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dot.addEventListener('click', function() {
         document.getElementById("numbox").value += '.';
+    });
+
+    clear.addEventListener('click', function() {
+        document.getElementById("calc").reset();
     });
 });
