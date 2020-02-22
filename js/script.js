@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+	//INPUTS:
+
 	var zero = document.getElementById('zero');
     var one = document.getElementById('one');
     var two = document.getElementById('two');
@@ -60,4 +62,27 @@ document.addEventListener('DOMContentLoaded', function() {
     clear.addEventListener('click', function() {
         document.getElementById("calc").reset();
     });
+
+    ////OPERATIONS:
+    var add = document.getElementById('add');
+    var subtract = document.getElementById('subtract');
+    var times = document.getElementById('times');
+    var divide = document.getElementById('divide');
+
+    add.addEventListener('click', function() {
+        document.getElementById("numbox").value += '+';
+    });
+
+    subtract.addEventListener('click', function() {
+        document.getElementById("numbox").value += '-';
+    });
+
+    times.addEventListener('click', function() {
+        document.getElementById("numbox").value += '*';
+    });
+
+    divide.addEventListener('click', function() {
+        document.getElementById("numbox").value += '/';
+    });
+
 });
