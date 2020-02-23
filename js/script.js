@@ -12,55 +12,102 @@ document.addEventListener('DOMContentLoaded', function() {
     var eight = document.getElementById('eight');
     var nine = document.getElementById('nine');
     var dot = document.getElementById('dot');
+    var acclear = document.getElementById('acclear');
     var clear = document.getElementById('clear');
 
-
     zero.addEventListener('click', function() {
-        document.getElementById("numbox").value += '0';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '0';
+        } else {
+            document.getElementById("numbox").value += '0';
+        }
     });
 
     one.addEventListener('click', function() {
-        document.getElementById("numbox").value += '1';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '1';
+        } else {
+            document.getElementById("numbox").value += '1';
+        }
     });
 
     two.addEventListener('click', function() {
-        document.getElementById("numbox").value += '2';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '2';
+        } else {
+            document.getElementById("numbox").value += '2';
+        }
     });
 
     three.addEventListener('click', function() {
-        document.getElementById("numbox").value += '3';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '3';
+        } else {
+            document.getElementById("numbox").value += '3';
+        }
     });
 
     four.addEventListener('click', function() {
-        document.getElementById("numbox").value += '4';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '4';
+        } else {
+            document.getElementById("numbox").value += '4';
+        }
     });
 
     five.addEventListener('click', function() {
-        document.getElementById("numbox").value += '5';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '5';
+        } else {
+            document.getElementById("numbox").value += '5';
+        }
     });
 
     six.addEventListener('click', function() {
-        document.getElementById("numbox").value += '6';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '6';
+        } else {
+            document.getElementById("numbox").value += '6';
+        }
     });
 
     seven.addEventListener('click', function() {
-        document.getElementById("numbox").value += '7';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '7';
+        } else {
+            document.getElementById("numbox").value += '7';
+        }
     });
 
     eight.addEventListener('click', function() {
-        document.getElementById("numbox").value += '8';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '8';
+        } else {
+            document.getElementById("numbox").value += '8';
+        }
     });
 
     nine.addEventListener('click', function() {
-        document.getElementById("numbox").value += '9';
+        if (document.getElementById("numbox").value == '0') {
+            document.getElementById("numbox").value = '9';
+        } else {
+            document.getElementById("numbox").value += '9';
+        }
     });
 
     dot.addEventListener('click', function() {
-        document.getElementById("numbox").value += '.';
+        if ((document.getElementById("numbox").value).slice(-1) == '.') {
+        } else {
+            document.getElementById("numbox").value += '.';
+        }
+    });
+
+    acclear.addEventListener('click', function() {
+        document.getElementById("numbox").value = '0';
     });
 
     clear.addEventListener('click', function() {
-        document.getElementById("calc").reset();
+        document.getElementById("numbox").value = '0';
     });
 
     ////OPERATIONS:
@@ -68,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var subtract = document.getElementById('subtract');
     var times = document.getElementById('times');
     var divide = document.getElementById('divide');
+    var equals = document.getElementById('equals');
 
     add.addEventListener('click', function() {
         document.getElementById("numbox").value += '+';
@@ -85,4 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("numbox").value += '/';
     });
 
+    equals.addEventListener('click', function() {
+        document.getElementById("numbox").value = eval(document.getElementById("numbox").value);
+    });
 });
