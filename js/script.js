@@ -96,9 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     dot.addEventListener('click', function() {
-        if ((document.getElementById("numbox").value).slice(-1) == '.') {
+        var str = document.getElementById("numbox").value;
+        if (str.slice(-1) == '.') {
         } else {
-            document.getElementById("numbox").value += '.';
+            for (var i = str.length; i > 0; i--) {
+                if (str.charAt(i) == '+' || str.charAt(i) == '-' || str.charAt(i) == '*' || str.charAt(i) == '/'){
+                    document.getElementById("numbox").value += '.';
+                    break;
+                } else if (str.charAt(i) == '.'){
+                    break;
+                }
+                if (i == 1){
+                    document.getElementById("numbox").value += '.';
+                }
+            }
         }
     });
 
@@ -118,19 +129,31 @@ document.addEventListener('DOMContentLoaded', function() {
     var equals = document.getElementById('equals');
 
     add.addEventListener('click', function() {
-        document.getElementById("numbox").value += '+';
+        if ((document.getElementById("numbox").value).slice(-1) == '+') {
+        } else {
+            document.getElementById("numbox").value += '+';
+        }
     });
 
     subtract.addEventListener('click', function() {
-        document.getElementById("numbox").value += '-';
+        if ((document.getElementById("numbox").value).slice(-1) == '-') {
+        } else {
+            document.getElementById("numbox").value += '-';
+        }
     });
 
     times.addEventListener('click', function() {
-        document.getElementById("numbox").value += '*';
+        if ((document.getElementById("numbox").value).slice(-1) == '*') {
+        } else {
+            document.getElementById("numbox").value += '*';
+        }
     });
 
     divide.addEventListener('click', function() {
-        document.getElementById("numbox").value += '/';
+        if ((document.getElementById("numbox").value).slice(-1) == '/') {
+        } else {
+            document.getElementById("numbox").value += '/';
+        }
     });
 
     equals.addEventListener('click', function() {
