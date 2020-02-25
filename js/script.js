@@ -156,6 +156,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    var input = document.getElementById("numbox");
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            document.getElementById("equals").click();
+        }
+    });
+
     equals.addEventListener('click', function() {
         document.getElementById("numbox").value = eval(document.getElementById("numbox").value);
     });
